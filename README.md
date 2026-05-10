@@ -16,7 +16,7 @@ This repository contains a structured and deeply detailed AI learning roadmap de
 - Backend + AI System Designers
 - Production AI Engineers
 
-The roadmap progresses step-by-step from foundations to advanced real-world systems.
+The roadmap progresses step-by-step from foundations to advanced real-world systems. It consists of **27 Phases** and **552 Lessons**, totaling over 3,000 hours of curriculum.
 
 ---
 
@@ -45,13 +45,12 @@ The roadmap progresses step-by-step from foundations to advanced real-world syst
 
 ---
 
-## Deep Learning
+## Deep Learning & Architectures
 - Neural Networks
-- CNNs
-- RNNs
-- LSTMs
+- CNNs & RNNs (LSTMs)
 - Transformers
 - Attention Mechanism
+- State Space Models (Mamba, SSMs, Jamba)
 - Diffusion Models
 
 ---
@@ -59,19 +58,19 @@ The roadmap progresses step-by-step from foundations to advanced real-world syst
 ## Generative AI
 - Large Language Models (LLMs)
 - Prompt Engineering
-- RAG Systems
-- Fine-Tuning
-- Embeddings
-- Vector Databases
-- LangChain
-- LangGraph
+- RAG Systems (Graph RAG, Self-RAG, HyDE)
+- Fine-Tuning (LoRA, QLoRA)
+- Embeddings & Vector Databases
+- LangChain & LangGraph
 - MCP (Model Context Protocol)
 
 ---
 
-## Agentic AI
-- AI Agents
-- Tool Calling
+## Reasoning & Agentic AI
+- Test-Time Compute (o1/o3/DeepSeek-R1 paradigms)
+- Process Reward Models (PRMs) & MCTS
+- Mixture-of-Depths (MoD) & TTT
+- AI Agents & Tool Calling
 - Multi-Agent Systems
 - Autonomous Workflows
 - Memory Systems
@@ -79,35 +78,32 @@ The roadmap progresses step-by-step from foundations to advanced real-world syst
 
 ---
 
-## AI Infrastructure
-- GPU Programming
-- CUDA
-- Triton
-- vLLM
+## AI Infrastructure & Data Engineering
+- GPU Programming (CUDA, Triton)
+- Distributed Training (FSDP, ZeRO, Megatron-LM)
+- Continuous Batching & vLLM
 - Model Serving
-- Distributed Training
 - Inference Optimization
+- Distributed Data Pipelines (Spark, Flink, Kafka)
+- Web-Scale Crawling & Decontamination Pipelines
 
 ---
 
 ## MLOps & Production AI
-- Docker
-- FastAPI
-- Monitoring
-- Evaluation Pipelines
+- Unified MLOps Lifecycle
+- Docker & FastAPI
+- Monitoring & CI/CD
+- Evaluation Pipelines (RAGAS, DeepEval)
 - Observability
-- CI/CD
-- Deployment
-- Scaling AI Systems
+- Deployment & Scaling AI Systems
+- Federated Learning
 
 ---
 
 ## AI Safety & Alignment
-- RLHF
-- DPO
+- RLHF & DPO
 - Constitutional AI
-- Prompt Injection
-- Jailbreaks
+- Prompt Injection & Jailbreaks
 - Red Teaming
 - AI Governance
 
@@ -118,6 +114,7 @@ The roadmap progresses step-by-step from foundations to advanced real-world syst
 - Circuits Analysis
 - Attribution Methods
 - Activation Patching
+- Toy Models of Superposition
 
 ---
 
@@ -153,5 +150,6 @@ The goal of this roadmap is to provide a complete AI learning journey so learner
 ```text
 AI_ROADMAP/
 │
-├── AI_ROADMAP.md
+├── AI_ML_Roadmap.md
 ├── README.md
+```
