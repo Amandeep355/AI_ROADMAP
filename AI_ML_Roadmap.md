@@ -566,8 +566,6 @@ graph TD
 
 **Prerequisites:** Phase 11 (LLMs from Scratch), Phase 14 (LLM Engineering)
 
-**Why this phase exists:** At Anthropic, OpenAI, and Google DeepMind, eval engineering is a full discipline — not a lesson tacked onto another phase. Good evals are harder to build than good models. Bad evals are the #1 cause of shipping regressions, reward hacking, and alignment failures in production. This phase teaches you to design, build, and red-team evaluation systems that actually measure what matters.
-
 | # | Lesson | Type | What's Inside |
 |---|--------|------|---------------|
 | 01 | Eval Engineering Fundamentals | Learn 🐍 (M) | What eval engineering is, why evals are the hardest part of ML, eval taxonomy (capability / safety / alignment / behavioral), the eval lifecycle, evals as a product discipline |
@@ -822,8 +820,6 @@ graph TD
 
 **Prerequisites:** Phase 2 (ML Fundamentals), Phase 6 (Transformers), Phase 7 (GNNs), Phase 13 (Data Engineering), Phase 15 (LLM Engineering), Phase 16 (Eval Engineering), Phase 22 (Infrastructure & Production)
 
-**Why this phase exists:** ML system design is the highest-signal round in FAANG ML interviews — and the skill most directly tied to senior promotion decisions. It requires reasoning across ML modeling, data pipelines, serving infrastructure, and business constraints simultaneously. Most engineers learn this only through years of production experience. This phase compresses that into a structured curriculum.
-
 | # | Lesson | Type | What's Inside |
 |---|--------|------|---------------|
 | 01 | ML System Design Framework | Learn 🐍 (M) | How to structure an ML system design answer — problem clarification → data strategy → feature engineering → modeling → training pipeline → serving → monitoring → failure modes. Applies to all 13 lessons that follow. |
@@ -889,8 +885,6 @@ graph TD
 > 🔬 16 Lessons · Opening the black box of LLMs (Anthropic's core research domain)
 
 **Prerequisites:** Phase 6 (Transformers Deep Dive), Phase 11 (LLMs from Scratch)
-
-**Why this phase was expanded:** Anthropic treats mechanistic interpretability as a core research pillar — not a footnote. If you're targeting Anthropic or any safety-focused lab, this is where you differentiate yourself. The original 8 lessons covered breadth; these 16 give you the depth to actually contribute to the field.
 
 | # | Lesson | Type | What's Inside |
 |---|--------|------|---------------|
