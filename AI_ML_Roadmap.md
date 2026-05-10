@@ -5,8 +5,8 @@
 ---
 
 > **Language:** Python 🐍 Only  
-> **Total Phases:** 27  
-> **Total Lessons:** 556  
+> **Total Phases:** 30  
+> **Total Lessons:** 594  
 > **Goal:** Junior → Senior AI Engineer at FAANG / Anthropic / OpenAI  
 > **Time Commitment:** ~2,900–3,900 hours (2–3 years full-time)  
 > **Lesson Estimates:** (S) = <1 hr | (M) = 1-3 hrs | (L) = 3-8 hrs
@@ -23,14 +23,28 @@ At this point, you've built an MLP with backprop and you're ready for any track.
 
 ---
 
+## 🏔️ Milestone Compression
+These milestones represent your identity transitions throughout the roadmap. Use these as your primary psychological checkpoints.
+
+| Milestone | Outcome | Achieved After |
+|-----------|---------|----------------|
+| **Milestone 1** | Classical ML Engineer | Phase 2 |
+| **Milestone 2** | Deep Learning Engineer | Phase 5 |
+| **Milestone 3** | LLM Engineer | Phase 15 |
+| **Milestone 4** | AI Systems Engineer | Phase 23 |
+| **Milestone 5** | Agentic AI Engineer | Phase 21 |
+| **Milestone 6** | AI Research Scientist | Phase 29 |
+
+---
+
 ## 🗺️ Learning Tracks & Dependency Graph
 To help you navigate this comprehensive roadmap, here are the phase dependencies and suggested tracks based on your career goals.
 
 ### Minimum Viable Tracks
-- **Research Scientist (Anthropic/OpenAI):** Phases 1, 3, 6, 10, 11, 14, 24, 25
-- **LLM Platform Engineer:** Phases 0, 3, 6, 13, 15, 16, 18, 22, 23
-- **FAANG ML Engineer:** Phases 0, 2, 3, 6, 7, 11, 13, 15, 16, 22, 23
-- **Eval / Safety Engineer:** Phases 0, 2, 6, 11, 15, 16, 24, 25
+- **Research Scientist (Anthropic/OpenAI):** Phases 1, 3, 6, 10, 11, 14, 27, 28
+- **LLM Platform Engineer:** Phases 0, 3, 6, 13, 15, 16, 18, 22, 23, 24, 25
+- **FAANG ML Engineer:** Phases 0, 2, 3, 6, 7, 11, 13, 15, 16, 22, 23, 24, 26
+- **Eval / Safety Engineer:** Phases 0, 2, 6, 11, 15, 16, 26, 27, 28
 
 ### Phase Dependencies
 | Phase | Prerequisites | Description |
@@ -106,9 +120,15 @@ graph TD
     P13 --> P23[P23: ML System Design]
     P16 --> P23
     P22 --> P23
-    P11 --> P24[P24: Ethics & Alignment]
-    P11 --> P25[P25: Mech Interp]
-    P6 --> P25
+    P15 --> P24[P24: AI Systems Economics]
+    P22 --> P24
+    P15 --> P25[P25: AI Product Engineering]
+    P19 --> P25
+    P23 --> P26[P26: Real Production Failures]
+    P24 --> P26
+    P11 --> P27[P27: Ethics & Alignment]
+    P11 --> P28[P28: Mech Interp]
+    P6 --> P28
 ```
 
 ---
@@ -139,12 +159,15 @@ graph TD
 | [Phase 19](#phase-19--agent-engineering) | Agent Engineering | 31 |
 | [Phase 20](#phase-20--autonomous-systems) | Autonomous Systems | 29 |
 | [Phase 21](#phase-21--multi-agent--swarms) | Multi-Agent & Swarms | 25 |
-| [Phase 22](#phase-22--infrastructure--production) | Infrastructure & Production | 49 |
+| [Phase 22](#phase-22--infrastructure--production) | Infrastructure & Production | 55 |
 | [Phase 23](#phase-23--ml-system-design) | ML System Design | 17 |
-| [Phase 24](#phase-24--ethics-safety--alignment) | Ethics, Safety & Alignment | 32 |
-| [Phase 25](#phase-25--mechanistic-interpretability) | Mechanistic Interpretability | 16 |
-| [Phase 26](#phase-26--capstone-projects) | Capstone Projects | 20 |
-| **TOTAL** | | **556** |
+| [Phase 24](#phase-24--ai-systems-economics) | AI Systems Economics | 10 |
+| [Phase 25](#phase-25--ai-product-engineering--human-factors) | AI Product Engineering & Human Factors | 10 |
+| [Phase 26](#phase-26--real-production-failures--postmortems) | Real Production Failures & Postmortems | 12 |
+| [Phase 27](#phase-27--ethics-safety--alignment) | Ethics, Safety & Alignment | 32 |
+| [Phase 28](#phase-28--mechanistic-interpretability) | Mechanistic Interpretability | 16 |
+| [Phase 29](#phase-29--capstone-projects) | Capstone Projects | 20 |
+| **TOTAL** | | **594** |
 
 ---
 
@@ -772,7 +795,7 @@ graph TD
 ---
 
 ## Phase 22 — Infrastructure & Production
-> ⬛ 49 Lessons · Ship AI to the real world at scale (GPU kernels, OSS contribution, production engineering)
+> ⬛ 55 Lessons · Ship AI to the real world at scale (GPU kernels, OSS contribution, production engineering)
 
 | # | Lesson | Type | What's Inside |
 |---|--------|------|---------------|
@@ -824,7 +847,13 @@ graph TD
 | 45 | Federated Averaging (FedAvg) | Build 🐍 (M) | The standard FedAvg algorithm, communication efficiency, handling non-IID data |
 | 46 | Secure Aggregation & Privacy | Build 🐍 (L) | Differential privacy in Federated Learning, Homomorphic encryption for model aggregation |
 | 47 | Federated LLM Fine-Tuning | Build 🐍 (L) | Using PEFT (LoRA) over Federated Learning across multiple clients to train a global LLM safely |
-| 48 | Phase 22 Synthesis Project | Build 🐍 (L) | Implement a federated LoRA fine-tuning pipeline and serve it using advanced KV cache techniques |
+| 48 | GPU Tensor Cores & Matrix Multiply Units | Learn 🐍 (M) | Hardware deep dive into Tensor Cores, MMA instructions, mixed-precision limitations |
+| 49 | PyTorch Compiler Stack (torch.compile) | Build 🐍 (L) | Dynamo, AOTAutograd, Inductor — understanding graph capture and code generation |
+| 50 | XLA (Accelerated Linear Algebra) Basics | Learn 🐍 (M) | JAX and PyTorch XLA, intermediate representations, HLO (High Level Optimizer) |
+| 51 | MLIR (Multi-Level Intermediate Representation) | Learn 🐍 (M) | Dialects, compiling ML models to multiple hardware targets, LLVM infrastructure |
+| 52 | NCCL Internals & Distributed Comm | Learn 🐍 (L) | NVIDIA Collective Communication Library, rings vs trees, all-reduce, all-gather bottlenecks |
+| 53 | FlashAttention & Fused Ops Internals | Learn 🐍 (L) | Tiling, recomputation, SRAM vs HBM economics — rewriting standard attention to FlashAttention |
+| 54 | Phase 22 Synthesis Project | Build 🐍 (L) | Implement a federated LoRA fine-tuning pipeline and serve it using advanced KV cache techniques |
 
 ---
 
@@ -855,7 +884,69 @@ graph TD
 
 ---
 
-## Phase 24 — Ethics, Safety & Alignment
+## Phase 24 — AI Systems Economics
+> 💰 10 Lessons · The financial reality of production AI inference
+
+**Prerequisites:** Phase 15 (LLM Engineering), Phase 22 (Infrastructure & Production)
+
+| # | Lesson | Type | What's Inside |
+|---|--------|------|---------------|
+| 01 | Inference Throughput vs Latency | Learn 🐍 (M) | The fundamental tradeoff: maximizing batch size vs TTFT/TPOT SLAs, Little's Law applied to LLM serving |
+| 02 | Continuous Batching Efficiency | Build 🐍 (M) | Measuring vLLM/Orca efficiency, prefill vs decode phase constraints, KV cache fragmentation costs |
+| 03 | Cost Per Token Modeling | Learn 🐍 (S) | Modeling cloud compute costs, amortizing hardware costs (H100/B200), calculating breakeven points for inference |
+| 04 | GPU Utilization Economics | Learn 🐍 (M) | Why GPUs sitting idle destroy unit economics, multi-tenant scheduling, spot instance management for inference |
+| 05 | Routing Economics (RouteLLM) | Build 🐍 (L) | Routing easy queries to cheap models (llama-3-8b) and hard queries to frontier models to cut costs by 50-80% |
+| 06 | Distillation vs Serving Costs | Learn 🐍 (M) | The financial math of distillation: cost to train a small model vs cost saved over millions of inferences |
+| 07 | Speculative Decoding Profitability | Learn 🐍 (M) | Does the draft model overhead cost more than the speedup saves? Target token acceptance rate math |
+| 08 | Serving Profitability & Pricing Models | Learn 🐍 (S) | Designing SaaS pricing tiers around AI features without losing money to power users |
+| 09 | Multi-Tenant Cost Sharing | Learn 🐍 (M) | LoRA multiplexing economics (S-LoRA), serving 10,000 fine-tunes on 1 GPU cluster |
+| 10 | Phase 24 Synthesis Project | Build 🐍 (L) | Build a cost-optimized serving gateway with dynamic model routing, semantic caching, and real-time cost-per-query tracking |
+
+---
+
+## Phase 25 — AI Product Engineering & Human Factors
+> 🧑‍💻 10 Lessons · Where the model meets the user
+
+**Prerequisites:** Phase 15 (LLM Engineering), Phase 19 (Agent Engineering)
+
+| # | Lesson | Type | What's Inside |
+|---|--------|------|---------------|
+| 01 | Conversational UX Design | Learn 🐍 (M) | Turn-taking, multi-turn context UX, explicit vs implicit conversational intents |
+| 02 | Latency Perception & Streaming UX | Build 🐍 (M) | Streaming tokens to mask TTFT, progressive rendering, optimistic UI updates for LLMs |
+| 03 | Trust Calibration & Uncertainty | Build 🐍 (M) | Designing UX for low-confidence outputs, showing citations, avoiding overconfident phrasing |
+| 04 | Human-in-the-Loop (HITL) Feedback | Build 🐍 (L) | Thumbs up/down, implicit feedback (copy-paste rate, abandonment), building continuous data flywheels |
+| 05 | Designing Graceful Fallback Systems | Build 🐍 (M) | What the UX does when the model refuses, times out, or hallucinates |
+| 06 | Human Override & Steering | Build 🐍 (M) | Interfaces that let users edit the agent's plan before execution, granular approval steps |
+| 07 | Context Window Management for UX | Build 🐍 (L) | Visually showing the user what the model "sees" (context limits), user-driven document selection |
+| 08 | Personalization without Intrusion | Learn 🐍 (M) | UX for long-term memory, managing user profiles, allowing users to wipe AI memory |
+| 09 | Aligning AI Outputs with User Intent | Build 🐍 (M) | Exposing "System Prompts" vs hiding them, letting users define the persona |
+| 10 | Phase 25 Synthesis Project | Build 🐍 (L) | Build a complete frontend + backend chat interface that implements streaming, HITL feedback capture, and transparent citations |
+
+---
+
+## Phase 26 — Real Production Failures & Postmortems
+> 🚨 12 Lessons · Battle-testing through the scars of scaling collapse
+
+**Prerequisites:** Phase 23 (ML System Design), Phase 24 (AI Systems Economics)
+
+| # | Lesson | Type | What's Inside |
+|---|--------|------|---------------|
+| 01 | Embedding Drift & Stagnation | Learn 🐍 (M) | When the embedding model updates but the vector database isn't backfilled, versioning embeddings |
+| 02 | Retrieval Collapse in RAG | Learn 🐍 (M) | The "lost in the middle" phenomenon in prod, semantic mismatch scaling failures |
+| 03 | Prompt Injection Postmortems | Learn 🐍 (M) | Analyzing famous data exfiltration and agent hijack attacks, why pure regex filtering fails |
+| 04 | Hallucination Debugging at Scale | Build 🐍 (M) | Tracing back a hallucination to pretraining data vs prompt ambiguity vs sampling temperature |
+| 05 | RLHF Reward Hacking in the Wild | Learn 🐍 (M) | How production models learn to game engagement metrics (sycophancy, clickbait generation) |
+| 06 | Evaluation Leakage | Learn 🐍 (M) | When your benchmark set accidentally leaks into the training pipeline, catastrophic overestimation of capability |
+| 07 | GPU OOM Debugging & Trace Analysis | Build 🐍 (L) | Analyzing PyTorch memory traces, finding the rogue tensor that causes Out-Of-Memory errors during inference |
+| 08 | Distributed Deadlocks (NCCL) | Learn 🐍 (M) | Debugging stalled multi-GPU training jobs, NCCL timeouts, network partitioning |
+| 09 | Silent Model Degradation | Learn 🐍 (M) | The slow boil: how continuous deployment of fine-tunes degrades capabilities unnoticed |
+| 10 | Dataset Poisoning Case Studies | Learn 🐍 (S) | Nightshade, Glaze, and malicious Wikipedia edits — defending the data pipeline |
+| 11 | Catastrophic Forgetting in Production | Build 🐍 (M) | When the model learns the new domain but forgets basic logic, mitigating via EWC and replay |
+| 12 | Phase 26 Synthesis Project | Build 🐍 (L) | Run an incident response simulation (Chaos Engineering) on a production RAG system, diagnose and fix 3 injected failures |
+
+---
+
+## Phase 27 — Ethics, Safety & Alignment
 > 🟪 32 Lessons · Build AI that helps humanity — not optional
 
 | # | Lesson | Type | What's Inside |
@@ -895,7 +986,7 @@ graph TD
 
 ---
 
-## Phase 25 — Mechanistic Interpretability
+## Phase 28 — Mechanistic Interpretability
 > 🔬 16 Lessons · Opening the black box of LLMs (Anthropic's core research domain)
 
 **Prerequisites:** Phase 6 (Transformers Deep Dive), Phase 11 (LLMs from Scratch)
@@ -921,7 +1012,7 @@ graph TD
 
 ---
 
-## Phase 26 — Capstone Projects
+## Phase 29 — Capstone Projects
 > 🏆 20 Projects · End-to-end shippable products — 20-80 hours each
 
 ### Capstone Difficulty Tiers
@@ -934,23 +1025,23 @@ graph TD
 
 | # | Project | Phases Combined |
 |---|---------|-----------------|
-| 01 | Terminal-Native Coding Agent | P0 + P5 + P6 + P11 + P13 + P15 + P16 + P18 + P19 + P20 + P22 + P24 |
+| 01 | Terminal-Native Coding Agent | P0 + P5 + P6 + P11 + P13 + P15 + P16 + P18 + P19 + P20 + P22 + P27 |
 | 02 | RAG over Codebase (Cross-Repo Semantic Search) | P5 + P6 + P15 + P16 + P18 + P22 |
 | 03 | Real-Time Voice Assistant (ASR → LLM → TTS) | P6 + P9 + P15 + P18 + P19 + P22 |
 | 04 | Multimodal Document QA (Vision-First) | P4 + P5 + P6 + P15 + P16 + P17 + P22 |
-| 05 | Autonomous Research Agent (AI-Scientist Class) | P0 + P2 + P3 + P6 + P11 + P19 + P20 + P21 + P24 |
-| 06 | DevOps Troubleshooting Agent for Kubernetes | P15 + P18 + P19 + P20 + P22 + P24 |
-| 07 | End-to-End Fine-Tuning Pipeline | P2 + P3 + P6 + P11 + P13 + P15 + P16 + P22 + P23 + P24 |
-| 08 | Production RAG Chatbot (Regulated Vertical) | P5 + P6 + P15 + P16 + P17 + P22 + P23 + P24 |
+| 05 | Autonomous Research Agent (AI-Scientist Class) | P0 + P2 + P3 + P6 + P11 + P19 + P20 + P21 + P27 |
+| 06 | DevOps Troubleshooting Agent for Kubernetes | P15 + P18 + P19 + P20 + P22 + P27 |
+| 07 | End-to-End Fine-Tuning Pipeline | P2 + P3 + P6 + P11 + P13 + P15 + P16 + P22 + P23 + P27 |
+| 08 | Production RAG Chatbot (Regulated Vertical) | P5 + P6 + P15 + P16 + P17 + P22 + P23 + P27 |
 | 09 | Code Migration Agent (Repo-Level Upgrade) | P0 + P5 + P6 + P15 + P18 + P19 + P20 + P22 |
 | 10 | Multi-Agent Software Engineering Team | P15 + P18 + P19 + P20 + P21 + P22 + P23 |
-| 11 | LLM Observability & Eval Dashboard | P15 + P16 + P18 + P22 + P23 + P24 |
+| 11 | LLM Observability & Eval Dashboard | P15 + P16 + P18 + P22 + P23 + P27 |
 | 12 | Video Understanding Pipeline (Scene → QA) | P4 + P6 + P9 + P15 + P17 + P22 |
-| 13 | MCP Server with Registry and Governance | P15 + P18 + P19 + P22 + P24 |
+| 13 | MCP Server with Registry and Governance | P15 + P18 + P19 + P22 + P27 |
 | 14 | Speculative-Decoding Inference Server | P3 + P6 + P11 + P22 |
-| 15 | Constitutional Safety Harness + Red-Team Range | P11 + P15 + P16 + P18 + P19 + P24 |
+| 15 | Constitutional Safety Harness + Red-Team Range | P11 + P15 + P16 + P18 + P19 + P27 |
 | 16 | GitHub Issue-to-PR Autonomous Agent | P0 + P15 + P18 + P19 + P20 + P22 |
-| 17 | Personal AI Tutor (Adaptive, Multimodal) | P5 + P9 + P15 + P16 + P17 + P19 + P22 + P24 |
+| 17 | Personal AI Tutor (Adaptive, Multimodal) | P5 + P9 + P15 + P16 + P17 + P19 + P22 + P27 |
 | 18 | Knowledge Graph Completion & Reasoning System | P5 + P7 + P11 + P13 + P15 + P22 |
 | 19 | Molecular Property Prediction Pipeline | P1 + P3 + P7 + P13 + P16 + P22 |
 | 20 | Real-Time Fraud Detection on Transaction Graphs | P2 + P7 + P13 + P15 + P22 + P23 |
@@ -973,10 +1064,10 @@ graph TD
 | CLIP | Radford et al. | 2021 | Phase 17 |
 | Scaling Laws for Neural Language Models | Kaplan et al. | 2020 | Phase 6 |
 | LLaVA: Visual Instruction Tuning | Liu et al. | 2023 | Phase 17 |
-| Constitutional AI | Bai et al. | 2022 | Phase 24 |
-| Model Cards for Model Reporting | Mitchell et al. | 2019 | Phase 24 |
-| System Cards, a new resource for understanding AI systems | Meta AI | 2023 | Phase 24 |
-| Sleeper Agents | Hubinger et al. | 2024 | Phase 24 |
+| Constitutional AI | Bai et al. | 2022 | Phase 27 |
+| Model Cards for Model Reporting | Mitchell et al. | 2019 | Phase 27 |
+| System Cards, a new resource for understanding AI systems | Meta AI | 2023 | Phase 27 |
+| Sleeper Agents | Hubinger et al. | 2024 | Phase 27 |
 | Flash Attention | Dao et al. | 2022 | Phase 6 |
 | LoRA: Low-Rank Adaptation | Hu et al. | 2021 | Phase 15 |
 | DeepSeek-V3 Technical Report | DeepSeek | 2025 | Phase 11 |
@@ -989,10 +1080,10 @@ graph TD
 | Real-time Personalization using Embeddings for Search at Pinterest | Pal et al. | 2019 | Phase 23 |
 | Monolith: Real Time Recommendation System With Collisionless Embedding Table | Liu et al. | 2022 | Phase 23 |
 | DLRM: An Advanced, Open Source Deep Learning Recommendation Model | Naumov et al. | 2019 | Phase 23 |
-| Toy Models of Superposition | Elhage et al. | 2022 | Phase 25 |
-| Scaling Monosemanticity | Templeton et al. | 2024 | Phase 25 |
-| Interpretability in the Wild | Conmy et al. | 2023 | Phase 25 |
-| Representation Engineering | Zou et al. | 2023 | Phase 25 |
+| Toy Models of Superposition | Elhage et al. | 2022 | Phase 28 |
+| Scaling Monosemanticity | Templeton et al. | 2024 | Phase 28 |
+| Interpretability in the Wild | Conmy et al. | 2023 | Phase 28 |
+| Representation Engineering | Zou et al. | 2023 | Phase 28 |
 | Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena | Zheng et al. | 2023 | Phase 16 |
 | Semi-Supervised Classification with GCNs | Kipf & Welling | 2017 | Phase 7 |
 | Inductive Representation Learning on Large Graphs (GraphSAGE) | Hamilton et al. | 2017 | Phase 7 |
