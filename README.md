@@ -16,7 +16,7 @@ This repository contains a structured and deeply detailed AI learning roadmap de
 - Backend + AI System Designers
 - Production AI Engineers
 
-The roadmap progresses step-by-step from foundations to advanced real-world systems. It consists of **35 Phases** and **660 Lessons**, totaling over 3,200 hours of curriculum (with options for 2-3 years full-time or 4-6 years part-time tracks).
+The roadmap progresses step-by-step from foundations to advanced real-world systems. It consists of **35 Phases** and **677 Lessons**, totaling over 3,200 hours of curriculum (with options for 2-3 years full-time or 4-6 years part-time tracks).
 
 ---
 
